@@ -11,7 +11,7 @@ import { AdminModule } from '../admin/admin.module';
     PassportModule.register({ defaultStrategy: 'jwt' }),
     JwtModule.register({
       secret: process.env.JWT_SECRET ?? 'changeThisSecret',
-      signOptions: { expiresIn: '2h' },
+      signOptions: { expiresIn: '6h' },
     }),
     AdminModule,
   ],
