@@ -6,10 +6,10 @@ export type AdminDocument = HydratedDocument<Admin>;
 @Schema({ timestamps: true })
 export class Admin {
   @Prop({ required: true, unique: true, trim: true })
-  username: string;
+  username!: string;
 
   @Prop({ required: true })
-  password: string;
+  password!: string;
 
   createdAt?: Date;
   updatedAt?: Date;

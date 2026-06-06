@@ -6,16 +6,16 @@ export type CourseDocument = HydratedDocument<Course>;
 @Schema({ timestamps: true })
 export class Course {
   @Prop({ required: true, unique: true, trim: true })
-  title: string;
+  title!: string;
 
   @Prop({ default: '' })
-  description: string;
+  description!: string;
 
   @Prop({ required: true, min: 1 })
-  capacity: number;
+  capacity!: number;
 
   @Prop({ default: 0 })
-  enrolledCount: number;
+  enrolledCount!: number;
 }
 
 export const CourseSchema = SchemaFactory.createForClass(Course);

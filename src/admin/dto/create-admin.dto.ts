@@ -5,10 +5,10 @@ export class CreateAdminDto {
   @ApiProperty({ example: 'adminuser' })
   @IsString()
   @IsNotEmpty()
-  username: string;
+  username!: string;
 
   @ApiProperty({ example: 'strongPassword123' })
   @IsString()
   @MinLength(6)
-  password: string;
+  password!: string;
 }

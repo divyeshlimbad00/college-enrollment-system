@@ -5,7 +5,7 @@ export class CreateCourseDto {
   @ApiProperty({ example: 'Calculus I' })
   @IsString()
   @IsNotEmpty()
-  title: string;
+  title!: string;
 
   @ApiProperty({ example: 'Introduction to differential calculus', required: false })
   @IsString()
@@ -15,5 +15,5 @@ export class CreateCourseDto {
   @ApiProperty({ example: 30 })
   @IsNumber()
   @Min(1)
-  capacity: number;
+  capacity!: number;
 }
